@@ -8,3 +8,6 @@
 # Compiled output
 *.class
 out/*
+
+#this does the same thing as the out folder which is currently not present due to us using maven instead of intelij
+target
