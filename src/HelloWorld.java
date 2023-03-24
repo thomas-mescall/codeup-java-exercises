@@ -25,12 +25,14 @@ public static void main(String[] args) {
 
 //    ***Exception in thread "main" java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
 //    at HelloWorld.main(HelloWorld.java:29)***
+
 //    String theNumberThree = "three";
 //    Object o = theNumberThree;
 //    int three = (int) o;
 //    System.out.println(three);
 
 //    ***incompatible types error***
+
 //    int three = (int) "three";
 //    System.out.println(three);
 
@@ -49,7 +51,8 @@ public static void main(String[] args) {
     byte shorty = 127;
     System.out.println(shorty);
     System.out.println(++shorty);
-}
 
 }
+}
+
 
