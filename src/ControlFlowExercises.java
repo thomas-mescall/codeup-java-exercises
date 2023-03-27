@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
     public static void main(String[] arrgs) {
@@ -57,10 +59,45 @@ public class ControlFlowExercises {
                 System.out.print(x + " ");
             }
 
-
         }
 
         System.out.println();
+
+        Scanner myScanner = new Scanner(System.in);
+        String userinput2 = "y";
+
+        do {
+            System.out.print("Enter an integer: ");
+            //myScanner.next();
+            int userinput = Integer.parseInt(myScanner.nextLine());
+
+
+
+            System.out.println("Your Squared Numbers are: ");
+            for (int g = 1; g < userinput + 1; g++) {
+                System.out.println(Math.pow(g, 2));
+            }
+            System.out.println("Your Cubed Numbers are: ");
+            for (int g = 1; g < userinput + 1; g++) {
+                System.out.println(Math.pow(g, 3));
+            }
+
+            System.out.println("Would you like to continue? (y/n)");
+
+            userinput2 = myScanner.nextLine();
+            System.out.println(userinput2);
+
+            if (!userinput2.equalsIgnoreCase("y")) {
+                break;
+            }
+            //else{break;}
+
+        } while(true);
+
+
+
+
+
 
     }
 }
