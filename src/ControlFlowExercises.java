@@ -95,6 +95,28 @@ public class ControlFlowExercises {
         } while(true);
 
 
+        System.out.println("Please enter your letter grade: ");
+        String userinput3 = myScanner.nextLine();
+        char myChar = userinput3.charAt(0);
+//first take in string then use charAt(0)
+
+        switch (myChar) {
+            case 'a':
+                System.out.println("A: 100 - 88");
+                break;
+            case 'b':
+                System.out.println("B: 87-80");
+                break;
+            case 'c':
+                System.out.println("C: 79 - 67");
+                break;
+            case 'd':
+                System.out.println("D: 66 - 60");
+                break;
+            case 'f':
+                System.out.println("F: 59 - 0");
+                break;
+        }
 
 
 
