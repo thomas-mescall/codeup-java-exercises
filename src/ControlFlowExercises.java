@@ -16,7 +16,7 @@ public class ControlFlowExercises {
         do {
             System.out.print(j + " ");
             j -= 5;
-        } while(j > -10);
+        } while (j > -10);
 
         System.out.println();
 
@@ -24,11 +24,11 @@ public class ControlFlowExercises {
         do {
             System.out.println(w);
             w *= w;
-        } while(w * w < 1000000);
+        } while (w * w < 1000000);
 
         System.out.println();
 
-        for(int s = 5; s < 16; s++) {
+        for (int s = 5; s < 16; s++) {
             System.out.print(s + " ");
         }
 
@@ -38,24 +38,21 @@ public class ControlFlowExercises {
             System.out.print(t + " ");
         }
 
-        for(long q = 2; q < 100000; q *= q) {
+        for (long q = 2; q < 100000; q *= q) {
             System.out.println(q);
         }
 
         System.out.println();
 
         //Fizzbuzz
-        for(int x = 1; x < 101; x++) {
-            if(x % 3 == 0 && x % 5 == 0) {
+        for (int x = 1; x < 101; x++) {
+            if (x % 3 == 0 && x % 5 == 0) {
                 System.out.print("FizzBuzz" + " ");
-            }
-            else if(x % 3 == 0) {
+            } else if (x % 3 == 0) {
                 System.out.print("Fizz" + " ");
-            }
-            else if(x % 5 == 0) {
+            } else if (x % 5 == 0) {
                 System.out.print("Buzz" + " ");
-            }
-            else{
+            } else {
                 System.out.print(x + " ");
             }
 
@@ -70,7 +67,6 @@ public class ControlFlowExercises {
             System.out.print("Enter an integer: ");
             //myScanner.next();
             int userinput = Integer.parseInt(myScanner.nextLine());
-
 
 
             System.out.println("Your Squared Numbers are: ");
@@ -92,34 +88,71 @@ public class ControlFlowExercises {
             }
             //else{break;}
 
-        } while(true);
+        } while (true);
 
 
-        System.out.println("Please enter your letter grade: ");
-        String userinput3 = myScanner.nextLine();
-        char myChar = userinput3.charAt(0);
+
 //first take in string then use charAt(0)
+        while (true) {
+            System.out.println("Please enter your letter grade: ");
+            String userinput3 = myScanner.nextLine();
+            userinput3 = userinput3.toLowerCase();
+            char myChar = userinput3.charAt(0);
+            switch (myChar) {
+                case 'a':
+                    System.out.println("A: 100 - 88");
+                    break;
+                case 'b':
+                    System.out.println("B: 87-80");
+                    break;
+                case 'c':
+                    System.out.println("C: 79 - 67");
+                    break;
+                case 'd':
+                    System.out.println("D: 66 - 60");
+                    break;
+                case 'f':
+                    System.out.println("F: 59 - 0");
+                    break;
+                default:
+                    System.out.println("Please enter a valid grade");
+                    break;
 
-        switch (myChar) {
-            case 'a':
-                System.out.println("A: 100 - 88");
+            }
+            System.out.println("Continue? (y/n)");
+            String userinput4 = myScanner.nextLine();
+            if (!userinput4.equalsIgnoreCase("y")) {
                 break;
-            case 'b':
-                System.out.println("B: 87-80");
-                break;
-            case 'c':
-                System.out.println("C: 79 - 67");
-                break;
-            case 'd':
-                System.out.println("D: 66 - 60");
-                break;
-            case 'f':
-                System.out.println("F: 59 - 0");
-                break;
+            }
         }
 
 
+        do {
+            System.out.println("Please enter your numerical grade: ");
+            double userinput5 = Double.parseDouble(myScanner.nextLine());
+                if(userinput5 > 88) {
+                    System.out.println("A: 100 - 88");
+                }
+                else if(80 < userinput5 || userinput5 <87) {
+                    System.out.println("B: 87-80");
+                }
+                else if(67 < userinput5 || userinput5 < 79) {
+                    System.out.println("C: 79 - 67");
+                }
+                else if(60 < userinput5 || userinput5 < 66) {
+                    System.out.println("D: 66 - 60");
+                }
+                else if(userinput5 < 59) {
+                System.out.println("F: 59 - 0");
+                }
+                myScanner.nextLine();
+            System.out.println("Continue? (y/n)");
+            String userinput6 = myScanner.nextLine();
+                if (!userinput6.equalsIgnoreCase("y")) {
+                    break;
+                }
 
-
+            } while (true);
+        }
     }
-}
+
