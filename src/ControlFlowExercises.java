@@ -133,13 +133,13 @@ public class ControlFlowExercises {
                 if(userinput5 > 88) {
                     System.out.println("A: 100 - 88");
                 }
-                else if(80 < userinput5 || userinput5 <87) {
+                else if(80 < userinput5 && userinput5 <87) {
                     System.out.println("B: 87-80");
                 }
-                else if(67 < userinput5 || userinput5 < 79) {
+                else if(67 < userinput5 && userinput5 < 79) {
                     System.out.println("C: 79 - 67");
                 }
-                else if(60 < userinput5 || userinput5 < 66) {
+                else if(60 < userinput5 && userinput5 < 66) {
                     System.out.println("D: 66 - 60");
                 }
                 else if(userinput5 < 59) {
