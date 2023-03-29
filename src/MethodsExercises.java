@@ -54,19 +54,32 @@ public class MethodsExercises {
         public static int factorial(){
             Scanner myScanner = new Scanner(System.in);
             int userinput1;
-            //String userinput2;
             System.out.println("Enter an integer between 1 and 10");
             userinput1 = myScanner.nextInt();
             int factor = 1;
-            for(int i = 1; i <= userinput1; i++) {
-                factor *= i;
+            if(userinput1 > 1 && 10 > userinput1) {
+                for (int i = 1; i <= userinput1; i++) {
+                    factor *= i;
+                }
             }
-//            System.out.printf("Your new number is: %d", userinput1);
-//            myScanner.nextLine();
-//            System.out.println("Would you like to continue? (y/n)");
-//            userinput2 = myScanner.nextLine();
-
             return factor;
+        }
+
+        public static int diceRoll(){
+            Scanner myScanner = new Scanner(System.in);
+            int dice1, dice2;
+            do {
+                System.out.println("Enter the number of sides for your dice");
+                int userinput = myScanner.nextInt();
+                dice1 = (int) Math.floor(Math.random() * userinput) + 1;
+                myScanner.next();
+                dice2 = (int) Math.floor(Math.random() * userinput) + 1;
+                myScanner.next();
+                System.out.printf("You rolled a %d and a %d. Want to try again? (y/n)", dice1, dice2);
+                myScanner.next();
+            }while(myScanner.next().equalsIgnoreCase("y"));
+
+            return dice1;
         }
 
     //function for testing
@@ -76,6 +89,8 @@ public class MethodsExercises {
         int numOne = 5;
         int numTwo = 10;
 
+        System.out.println("Q4");
+        System.out.println(diceRoll());
         System.out.println("Q3");
         System.out.println(factorial());
         System.out.println("Q2");
