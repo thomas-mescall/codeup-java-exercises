@@ -104,9 +104,12 @@ public class AdventureGame {
         }
         return userInput;
     }
-//    public static String startGame(){
-//
-//    }
+    public static String scenarios(){
+        Scanner myScanner = new Scanner(System.in);
+
+        //building scenarios
+        System.out.println("While performing open heart surgery your patient's arms begin to move and his eyes open. The patient quickly grabs your assistant's hand and bites a chunk out of it.");
+    }
     public static void main(String[] args){
         System.out.println(characterClass());
         System.out.println(weaponClass());
