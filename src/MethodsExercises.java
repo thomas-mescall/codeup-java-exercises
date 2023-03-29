@@ -82,6 +82,8 @@ public class MethodsExercises {
             return dice1;
         }
 
+
+
     //function for testing
     public static void main(String[] args) {
 
