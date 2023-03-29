@@ -21,16 +21,6 @@ public class Input {
         return userInput.equalsIgnoreCase("Si");
     }
 
-    public int getInt(int min, int max) {
-        min = 2;
-        max = 9;
-        int num = getInt();
-        while(num < min && num > max) {
-            System.out.println("Pick a number between 2 - 9");
-        }
-        return num;
-    }
-
     public int getInt(){
         System.out.println("Enter an integer: ");
         while(!myScanner.hasNextInt()) {
@@ -40,7 +30,30 @@ public class Input {
         return myScanner.nextInt();
     }
 
-    public static void main(String[] args) {
+    public int getInt(int min, int max) {
+        int num = 0;
+        while(num < min || num > max) {
+            num = getInt();
+            System.out.println("Pick a number between 2 - 9");
+        }
+        return num;
+    }
 
+    public double getDouble(){
+        System.out.println("Enter a Double: ");
+        while(!myScanner.hasNextDouble()) {
+            System.out.println("Please enter a valid Double: ");
+            myScanner.next();
+        }
+        return myScanner.nextDouble();
+    }
+
+    public double getDouble(double min, double max) {
+        double num = 0;
+        while(num < min || num > max) {
+            num = getDouble();
+            System.out.println("Pick a number between 2 - 9");
+        }
+        return num;
     }
 }
