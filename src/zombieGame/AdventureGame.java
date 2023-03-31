@@ -1,3 +1,5 @@
+package zombieGame;
+
 import java.util.Scanner;
 
 public class AdventureGame {
@@ -124,12 +126,7 @@ public class AdventureGame {
         }
         return userInput;
     }
-//    public static String DoctorScenarios(){
-//        Scanner myScanner = new Scanner(System.in);
-//
-//        //building scenarios
-//        System.out.println("While performing open heart surgery your patient's arm begins to move and his eyes open. The patient quickly grabs your assistant's hand and bites a chunk out of it. You quickly jump back in disbelief and grab a...");
-//    }
+
     public static void main(String[] args){
         System.out.println(characterClass());
         System.out.println(weaponClass());
