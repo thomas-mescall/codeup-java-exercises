@@ -22,7 +22,7 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Enter an integer: ");
+        System.out.printf("%nEnter an integer: 0 - 2%n");
         while(!myScanner.hasNextInt()) {
             System.out.println("Please enter a valid integer: ");
             myScanner.next();
@@ -31,10 +31,10 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        int num = 0;
+        int num = -1;
         while(num < min || num > max) {
             num = getInt();
-            System.out.println("Pick a number between 2 - 9");
+            System.out.println("Pick a number between 0 - 2");
         }
         return num;
     }
