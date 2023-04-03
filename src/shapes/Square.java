@@ -6,4 +6,13 @@ public class Square extends Rectangle {
         super(side, side);
     }
 
+    @Override
+    public int getArea() {
+        return super.getArea();
+    }
+
+    @Override
+    public int getPerimeter() {
+        return super.getPerimeter();
+    }
 }
