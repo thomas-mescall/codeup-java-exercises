@@ -15,6 +15,7 @@ public class Student {
         return name;
     }
 
+
     public void addGrade(int grade){
         grades.add(grade);
     }
