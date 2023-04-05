@@ -1,6 +1,7 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Student {
     private String name;
@@ -11,10 +12,9 @@ public class Student {
         this.grades = new ArrayList<Integer>();
     }
 
-    public String getName(String name){
+    public String getName(){
         return name;
     }
-
 
     public void addGrade(int grade){
         grades.add(grade);
@@ -26,5 +26,14 @@ public class Student {
             sum += grade;
         }
         return sum / grades.size();
+    }
+
+
+    public String displayGrade(){
+        int[] newGrade = new int[4];
+        for(int i = 0; i < 4; i++) {
+            newGrade[i] = grades.get(i);
+        }
+        return Arrays.toString(newGrade);
     }
 }
